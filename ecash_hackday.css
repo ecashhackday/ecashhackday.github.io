@@ -7,9 +7,16 @@ body {
 
 /* fonts */
 
+@font-face{
+font-family: 'redaction';
+src: url('./Redaction20-Regular.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
 h1 {
 	color: #fff;
-	font-family: "Redaction 20";
+	font-family: "redaction";
 	font-size: 15vw;
 	color: #00f91d;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -19,7 +26,7 @@ h1 {
 
 h1.date {
 	color: #fff;
-	font-family: "Redaction 20";
+	font-family: "redaction";
 	font-size: 15vw;
 	color: #00f91d;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -30,7 +37,7 @@ h1.date {
 
 h1.time {
 	color: #fff;
-	font-family: "Redaction 20";
+	font-family: "redaction";
 	font-size: 15vw;
 	color: #00f91d;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -42,7 +49,7 @@ h1.time {
 h2 {
 	color: #000;
 	margin: 0;
-	font-family: "Redaction 20";
+	font-family: "redaction";
 
 }
 
