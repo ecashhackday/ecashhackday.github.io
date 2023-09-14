@@ -9,7 +9,7 @@ body {
 
 @font-face {
 	font-family: "Redaction 20";
-	src: url('https://github.com/ecashhackday/ecashhackday.github.io/blob/main/Redaction20-Regular.ttf' format:('truetype');
+	src: url('https://github.com/ecashhackday/ecashhackday.github.io/blob/main/Redaction20-Regular.ttf') format:('truetype');
 }
 
 h1 {
