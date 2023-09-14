@@ -1,0 +1,116 @@
+body {
+	background-color: #000;
+	background-image: url("webart.png");
+	background-size: cover;
+	padding-bottom: 250px;
+}
+
+/* fonts */
+
+h1 {
+	color: #fff;
+	font-family: "Redaction 20";
+	font-size: 15vw;
+	color: #00f91d;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	line-height: 0.75;
+	margin-bottom: 15px;
+}
+
+h1.date {
+	color: #fff;
+	font-family: "Redaction 20";
+	font-size: 15vw;
+	color: #00f91d;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	line-height: 0.75;
+	margin-bottom: 15px;
+	margin-top:  0px;
+}
+
+h1.time {
+	color: #fff;
+	font-family: "Redaction 20";
+	font-size: 15vw;
+	color: #00f91d;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	line-height: 0.75;
+	margin-bottom: 15px;
+	margin-top:  0px;
+}
+
+h2 {
+	color: #000;
+	margin: 0;
+	font-family: "Redaction 20";
+
+}
+
+/* boxes */
+
+#hero {
+	text-align: center;
+	margin-top: 15%;
+} 
+
+#info {
+	text-align: center;
+	background-color: #fff;
+	width: 500px;
+	margin: auto;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	border: 1px solid #000;
+	border-radius: 25px;
+}
+
+#signup {
+	text-align: center;
+	margin: auto;
+	width: 500px;
+	padding-top: 75px;
+	padding-bottom: 75px;
+}
+
+#signup img {
+	width: 500px;
+}
+
+#map {
+	text-align: center;
+	margin: auto;
+}
+
+/* ipad */
+
+@media screen and (max-width: 992px) {
+	h1 {
+		margin-top: 25%;
+		font-size: 20vw;
+	}
+
+	#info {
+		width: 400px;
+	}
+}
+
+/* mobile */
+
+@media screen and (max-width: 600px) {
+	h1 {
+		margin-top: 50%;
+		font-size: 20vw;
+	}
+
+	#signup img {
+		width: 300px;
+	}
+
+	#signup {
+		width: 300px;
+	}
+
+	#map iframe {
+		max-width: 75% !important;
+	}
+}
