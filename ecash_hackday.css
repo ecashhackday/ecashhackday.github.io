@@ -2,6 +2,7 @@ body {
 	background-color: #000;
 	background-image: url("Background_01.jpg");
 	background-size: cover;
+	background-attachment: fixed;
 	padding-bottom: 250px;
 }
 
