@@ -1,9 +1,52 @@
 body {
 	background-color: #000;
-	background-image: url("webart.jpg");
+	background-image: url("background.jpg");
 	background-size: cover;
 	padding-bottom: 250px;
 }
+
+/* animation */
+
+@keyframes resizeAnimation {
+    0%, 100% {
+        transform: scale(1);  /* Start and end at original size */
+    }
+    50% {
+        transform: scale(1.1);  /* Midpoint: increase size by 10% */
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: hsl(180, 50%, 60%);      /* Cyan */
+    }
+    12% {
+        color: hsl(300, 50%, 60%);      /* Magenta */
+    }
+    25% {
+        color: hsl(60, 50%, 60%);       /* Yellow */
+    }
+    37% {
+        color: hsl(0, 0%, 100%);        /* White */
+    }
+    50% {
+        color: hsl(150, 40%, 50%);      /* Teal */
+    }
+    62% {
+        color: hsl(330, 50%, 65%);      /* Rose */
+    }
+    75% {
+        color: hsl(43, 60%, 55%);       /* Goldenrod */
+    }
+    87% {
+        color: hsl(240, 40%, 70%);      /* Periwinkle */
+    }
+    100% {
+        color: hsl(180, 50%, 60%);      /* Back to Cyan */
+    }
+}
+
+
 
 /* fonts */
 
@@ -14,45 +57,69 @@ font-weight: normal;
 font-style: normal;
 }
 
+@font-face{
+font-family: 'gravity';
+src: url('./ABCGravity-Expanded-Trial.otf') format('opentype');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face{
+font-family: 'electra';
+src: url('./ElectraLTStd-Display.otf') format('opentype');
+font-weight: normal;
+font-style: normal;
+}
+
 h1 {
 	color: #fff;
-	font-family: "redaction";
+	font-family: "gravity";
 	font-size: 15vw;
-	color: #00f91d;
+	color: #FFFFFF;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	line-height: 0.75;
 	margin-bottom: 15px;
 }
+h1.ecash {
+	color: #fff;
+	font-family: "gravity";
+	font-size: 8vw;
+	color: #FFFFFF;
+	margin: 0px;
+	padding: 0px;
+}
+h1.hackday {
+	color: #fff;
+	font-family: "gravity";
+	font-size: 8vw;
+	color: #FFFFFF;
+	margin-bottom: px;
+	margin-top: 0px;
+}
 
 h1.location {
 	color: #fff;
-	font-family: "redaction";
-	font-size: 15vw;
-	color: #00f91d;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-	line-height: 0.75;
-	margin-bottom: 15px;
+	font-family: "gravity";
+	font-size: 3vw;
+	color: #FFFFFF;
+	margin-bottom: 50px;
 	margin-top:  0px;
 }
 
 h1.date {
 	color: #fff;
-	font-family: "redaction";
-	font-size: 15vw;
-	color: #00f91d;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-	line-height: 0.75;
+	font-family: "electra";
+	font-size: 5vw;
+	color: #FFFFFF;
 	margin-bottom: 15px;
 	margin-top:  0px;
 }
 
 h1.time {
 	color: #fff;
-	font-family: "redaction";
-	font-size: 15vw;
-	color: #00f91d;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-	line-height: 0.75;
+	font-family: "electra";
+	font-size: 3vw;
+	color: #FFFFFF;
 	margin-bottom: 15px;
 	margin-top:  0px;
 }
@@ -63,6 +130,55 @@ h2 {
 	font-family: "redaction";
 
 }
+
+span.thick {
+	color: #fff;
+	font-family: "gravity";
+	font-size: 4vw;
+	color: #FFFFFF;
+	margin-bottom: 50px;
+	margin-top:  0px;
+}
+span.thin {
+	color: #fff;
+	font-family: "electra";
+	font-size: 4vw;
+	color: #FFFFFF;
+	margin-bottom: 15px;
+	margin-top:  0px;
+}
+
+span.sign {
+	color: #fff;
+	font-family: "gravity";
+	font-size: 6vw;
+	color: #FFFFFF;
+	margin-bottom: 50px;
+	margin-top:  0px;
+}
+
+span.signthin {
+	color: #fff;
+	font-family: "electra";
+	font-size: 6vw;
+	color: #FFFFFF;
+	margin-bottom: 15px;
+	margin-top:  0px;
+}
+
+
+
+p.resize {
+	animation: resizeAnimation 2s infinite; 
+}
+p.resize a, p.resize a:hover, p.resize a:active {
+    text-decoration: none;
+}
+h1.ecash, h1.hackday {
+    animation: colorChange 3s infinite; /* Adjust the '2s' duration for faster/slower color transitions */
+}
+
+
 
 /* boxes */
 
@@ -132,3 +248,49 @@ h2 {
 		max-width: 75% !important;
 	}
 }
+
+/* mobile */
+@media screen and (max-width: 600px) {
+    h1 {
+        margin-top: 50%;
+        font-size: 25vw;  /* Adjusted from 20vw */
+    }
+
+    h1.ecash {
+        font-size: 10vw;  /* Adjusted from 8vw */
+    }
+
+    h1.hackday {
+        font-size: 10vw;  /* Adjusted from 8vw */
+    }
+
+    h1.location {
+        font-size: 5vw;   /* Adjusted from 4vw */
+    }
+
+    h1.date {
+        font-size: 6vw;   /* Adjusted from 5vw */
+    }
+
+    h1.time {
+        font-size: 4vw;   /* Adjusted from 3vw */
+    }
+
+    span.thick {
+        font-size: 6vw;   /* Adjusted from 4vw */
+    }
+
+    span.thin {
+        font-size: 6vw;   /* Adjusted from 4vw */
+    }
+
+    span.sign {
+        font-size: 8vw;   /* Adjusted from 4vw */
+    }
+	
+    span.signthin {
+        font-size: 8vw;   /* Adjusted from 4vw */
+    }
+    /* ... your other mobile-specific styles ... */
+}
+
