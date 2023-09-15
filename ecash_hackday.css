@@ -150,7 +150,7 @@ h2 {
 span.thick {
 	color: #fff;
 	font-family: "gravity";
-	font-size: 4vw;
+	font-size: 6vw;
 	color: #FFFFFF;
 	margin-bottom: 50px;
 	margin-top:  0px;
@@ -158,7 +158,7 @@ span.thick {
 span.thin {
 	color: #fff;
 	font-family: "electra";
-	font-size: 4vw;
+	font-size: 6vw;
 	color: #FFFFFF;
 	margin-bottom: 15px;
 	margin-top:  0px;
@@ -170,7 +170,9 @@ span.sign {
 	font-size: 6vw;
 	color: #FFFFFF;
 	margin-bottom: 50px;
+	line-height: 0.75;
 	margin-top:  0px;
+	padding-top: 2px;
 }
 
 span.signthin {
@@ -273,39 +275,39 @@ h1.ecash, h1.hackday {
     }
 
     h1.ecash {
-        font-size: 10vw;  /* Adjusted from 8vw */
+        font-size: 12vw;  /* Adjusted from 8vw */
     }
 
     h1.hackday {
-        font-size: 10vw;  /* Adjusted from 8vw */
+        font-size: 12vw;  /* Adjusted from 8vw */
     }
 
     h1.location {
-        font-size: 5vw;   /* Adjusted from 4vw */
+        font-size: 6vw;   /* Adjusted from 4vw */
     }
 
     h1.date {
-        font-size: 6vw;   /* Adjusted from 5vw */
+        font-size: 7vw;   /* Adjusted from 5vw */
     }
 
     h1.time {
-        font-size: 4vw;   /* Adjusted from 3vw */
+        font-size: 5vw;   /* Adjusted from 3vw */
     }
 
     span.thick {
-        font-size: 6vw;   /* Adjusted from 4vw */
+        font-size: 7vw;   /* Adjusted from 4vw */
     }
 
     span.thin {
-        font-size: 6vw;   /* Adjusted from 4vw */
+        font-size: 7vw;   /* Adjusted from 4vw */
     }
 
     span.sign {
-        font-size: 8vw;   /* Adjusted from 4vw */
+        font-size: 9vw;   /* Adjusted from 4vw */
     }
 	
     span.signthin {
-        font-size: 8vw;   /* Adjusted from 4vw */
+        font-size: 9vw;   /* Adjusted from 4vw */
     }
     /* ... your other mobile-specific styles ... */
 }
