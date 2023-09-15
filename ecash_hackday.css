@@ -30,7 +30,7 @@ font-style: normal;
 
 h1 {
 	font-family: "abcgravity";
-	font-size: 15vw;
+	font-size: 12vw;
 	color: #00f91d;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	line-height: 0.75;
@@ -40,19 +40,18 @@ h1 {
 
 h1.location {
 	font-family: "abcgravity-condensed";
-	font-size: 15vw;
+	font-size: 12vw;
 	color: #00f91d;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	line-height: 0.75;
 	margin-bottom: 15px;
 	margin-top:  0px;
-	text-transform: uppercase;
 }
 
 h1.date {
 	color: #fff;
 	font-family: "electra";
-	font-size: 15vw;
+	font-size: 12vw;
 	color: #00f91d;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	line-height: 0.75;
@@ -62,8 +61,8 @@ h1.date {
 
 h1.time {
 	color: #fff;
-	font-family: "redaction";
-	font-size: 15vw;
+	font-family: "electra";
+	font-size: 12vw;
 	color: #00f91d;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	line-height: 0.75;
