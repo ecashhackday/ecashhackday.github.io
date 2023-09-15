@@ -99,7 +99,7 @@ h1 {
 h1.ecash {
 	color: #fff;
 	font-family: "gravity";
-	font-size: 8vw;
+	font-size: 12vw;
 	color: #FFFFFF;
 	margin: 0px;
 	padding: 0px;
@@ -107,7 +107,7 @@ h1.ecash {
 h1.hackday {
 	color: #fff;
 	font-family: "gravity";
-	font-size: 8vw;
+	font-size: 12vw;
 	color: #FFFFFF;
 	margin-bottom: px;
 	margin-top: 0px;
@@ -116,7 +116,7 @@ h1.hackday {
 h1.location {
 	color: #fff;
 	font-family: "gravity";
-	font-size: 3vw;
+	font-size: 4vw;
 	color: #FFFFFF;
 	margin-bottom: 50px;
 	margin-top:  0px;
@@ -125,7 +125,7 @@ h1.location {
 h1.date {
 	color: #fff;
 	font-family: "electra";
-	font-size: 5vw;
+	font-size: 8vw;
 	color: #FFFFFF;
 	margin-bottom: 15px;
 	margin-top:  0px;
@@ -134,7 +134,7 @@ h1.date {
 h1.time {
 	color: #fff;
 	font-family: "electra";
-	font-size: 3vw;
+	font-size: 4vw;
 	color: #FFFFFF;
 	margin-bottom: 15px;
 	margin-top:  0px;
@@ -185,13 +185,13 @@ span.signthin {
 
 
 p.resize {
-	animation: resizeAnimation 2s infinite; 
+	animation: resizeAnimation 4s infinite; 
 }
 p.resize a, p.resize a:hover, p.resize a:active {
     text-decoration: none;
 }
 h1.ecash, h1.hackday {
-    animation: colorChange 3s infinite; /* Adjust the '2s' duration for faster/slower color transitions */
+    animation: colorChange 8s infinite; /* Adjust the '2s' duration for faster/slower color transitions */
 }
 
 
