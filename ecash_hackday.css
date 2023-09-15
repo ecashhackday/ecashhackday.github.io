@@ -21,6 +21,13 @@ font-weight: normal;
 font-style: normal;
 }
 
+@font-face{
+font-family: 'electra';
+src: url('./ElectraLTStd-Display.otf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
 h1 {
 	color: #fff;
 	font-family: "abcgravity";
@@ -44,7 +51,7 @@ h1.location {
 
 h1.date {
 	color: #fff;
-	font-family: "redaction";
+	font-family: "electra";
 	font-size: 15vw;
 	color: #00f91d;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
