@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#qrCode canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+
+.hidden {
+    display: none;
+}
+
+#qrArea {
+    text-align: center;
+    width: 100%;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#outputText {
+/*    overflow-wrap: break-word;*/
+/*    margin: 10px auto;*/
+}
+
+/* Optional: Responsive QR Code size */
+@media only screen and (min-width: 600px) {
+    #qrCode canvas {
+        width: 90% !important;
+        height: auto !important;
+    }
+}
+
+
