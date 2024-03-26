@@ -165,7 +165,6 @@ span.signthin {
 	padding-top: 75px;
 	padding-bottom: 75px;
 	text-shadow: 15px 2px 15px #000;
-	text-decoration: none;
 }
 
 #signup img {
@@ -192,10 +191,10 @@ span.signthin {
 
 /* mobile */
 
-@media screen and (max-width: 600px) {
-	h1 {
+@media screen and (max-width: 800px) {
+	
+	#hero {
 		margin-top: 50%;
-		font-size: 15vw;
 	}
 
 	#signup img {
@@ -209,41 +208,25 @@ span.signthin {
 	#map iframe {
 		max-width: 75% !important;
 	}
-}
-
-/* mobile */
-@media screen and (max-width: 600px) {
-    h1 {
-        margin-top: 50%;
-        font-size: 25vw;  /* Adjusted from 20vw */
-    }
 
     h1.ecash {
-        font-size: 12vw;  /* Adjusted from 8vw */
+        font-size: 18vw;  /* Adjusted from 12vw */
     }
 
     h1.hackday {
-        font-size: 12vw;  /* Adjusted from 8vw */
+        font-size: 18vw;  /* Adjusted from 12vw */
     }
 
     h1.location {
-        font-size: 6vw;   /* Adjusted from 4vw */
-    }
-
-    h1.date {
-        font-size: 7vw;   /* Adjusted from 5vw */
-    }
-
-    h1.time {
-        font-size: 5vw;   /* Adjusted from 3vw */
+        font-size: 12vw;   /* Adjusted from 8vw */
     }
 
     span.thick {
-        font-size: 7vw;   /* Adjusted from 4vw */
+        font-size: 10vw;   /* Adjusted from 4vw */
     }
 
     span.thin {
-        font-size: 7vw;   /* Adjusted from 4vw */
+        font-size: 9vw;   /* Adjusted from 4vw */
     }
 
     span.sign {
