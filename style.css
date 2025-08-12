@@ -1,0 +1,295 @@
+/* Modern Museum-Style Font Showcase */
+
+/* Font Declarations */
+@font-face {
+    font-family: 'Der75';
+    src: url('./fonts/der75.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goozette';
+    src: url('./fonts/Goozette.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Linea';
+    src: url('./fonts/Linea.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Outata';
+    src: url('./fonts/Outata.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RAMI';
+    src: url('./fonts/RAMI.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Scorpius';
+    src: url('./fonts/scorpius.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    height: 100%;
+}
+
+body {
+    font-family: 'Der75', sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 4rem;
+    height: 100vh;
+    align-content: center;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.typography-stack {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Typography Hierarchy */
+.display-xl {
+    font-family: 'Outata', serif;
+    font-size: clamp(4rem, 12vw, 12rem);
+    letter-spacing: -0.02em;
+    font-weight: normal;
+    line-height: 0.85;
+}
+
+.display-lg {
+    font-family: 'RAMI', sans-serif;
+    font-size: clamp(2.5rem, 8vw, 8rem);
+    letter-spacing: 0.02em;
+    font-weight: normal;
+    line-height: 0.9;
+    margin-top: -1rem;
+}
+
+.display-md {
+    font-family: 'Linea', sans-serif;
+    font-size: clamp(1.5rem, 5vw, 5rem);
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    line-height: 1;
+    margin-top: 2rem;
+    opacity: 0.9;
+}
+
+/* Date Block */
+.date-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 3rem 4rem;
+    border: 2px solid #ffffff;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+.date-primary {
+    font-family: 'Goozette', monospace;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    letter-spacing: 0.1em;
+    font-weight: normal;
+}
+
+.date-year {
+    font-family: 'Scorpius', serif;
+    font-size: clamp(2rem, 6vw, 5rem);
+    letter-spacing: -0.02em;
+    font-weight: normal;
+    line-height: 0.8;
+}
+
+/* CTA Section */
+.cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-link {
+    display: inline-block;
+    padding: 2rem 4rem;
+    border: 3px solid #ffffff;
+    background-color: transparent;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.signup-link:hover {
+    background-color: #ffffff;
+    color: #0a0a0a;
+    transform: translateY(-2px);
+}
+
+.signup-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.signup-link:hover::before {
+    left: 100%;
+}
+
+.signup-text {
+    font-family: 'Der75', sans-serif;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    letter-spacing: 0.15em;
+    font-weight: normal;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1rem;
+        gap: 3rem;
+    }
+    
+    .hero {
+        gap: 4rem;
+    }
+    
+    .typography-stack {
+        gap: 0.5rem;
+    }
+    
+    .date-block {
+        padding: 2rem 3rem;
+    }
+    
+    .signup-link {
+        padding: 1.5rem 3rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0.5rem;
+        gap: 2rem;
+    }
+    
+    .hero {
+        gap: 3rem;
+    }
+    
+    .date-block {
+        padding: 1.5rem 2rem;
+    }
+    
+    .signup-link {
+        padding: 1rem 2rem;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .signup-link {
+        transition: none;
+    }
+    
+    .signup-link::before {
+        transition: none;
+    }
+    
+    .signup-link:hover {
+        transform: none;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .date-block {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-width: 3px;
+    }
+    
+    .signup-link {
+        border-width: 4px;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+    
+    .signup-link {
+        border-color: black;
+        color: black;
+    }
+    
+    .date-block {
+        border-color: black;
+        background-color: white;
+    }
+}
