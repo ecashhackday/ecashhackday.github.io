@@ -1,11 +1,35 @@
-/* Manusquared Font Typeface Card Design */
+/* Modern Grid-Based Typeface Showcase */
+
+/* CSS Custom Properties */
+:root {
+    --color-primary: #ccff00;
+    --color-background-page: #000000;
+    --color-background-card: #2a2a2a;
+    --color-border: #404040;
+    
+    --font-family-primary: 'Manusquared', monospace;
+    
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    
+    --border-radius-card: 1.5rem;
+    --border-radius-sm: 0.25rem;
+    
+    --shadow-card: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.8);
+    
+    --transition-default: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 /* Font Declarations */
 @font-face {
     font-family: 'Manusquared';
     src: url('./fonts/Manusquared-Regular.woff2') format('woff2'),
          url('./fonts/Manusquared-Regular.woff') format('woff');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
@@ -14,259 +38,335 @@
     font-family: 'Manusquared';
     src: url('./fonts/Manusquared-Bold.woff2') format('woff2'),
          url('./fonts/Manusquared-Bold.woff') format('woff');
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
 /* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-html, body {
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
     height: 100%;
-    font-family: 'Manusquared', monospace;
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 body {
-    background-color: #000000;
+    height: 100%;
+    font-family: var(--font-family-primary);
+    background-color: var(--color-background-page);
+    color: var(--color-primary);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: var(--spacing-lg);
     min-height: 100vh;
 }
 
 /* Card Container */
 .card {
-    background-color: #2a2a2a;
-    border-radius: 24px;
-    width: 90vw;
-    max-width: 800px;
+    background-color: var(--color-background-card);
+    border-radius: var(--border-radius-card);
+    width: min(90vw, 50rem);
     min-height: 60vh;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    box-shadow: var(--shadow-card);
     overflow: hidden;
     position: relative;
 }
 
-/* Header */
+/* Header Grid System */
 .card-header {
-    background-color: #2a2a2a;
-    padding: 24px 32px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    border-bottom: 1px solid #404040;
+    gap: var(--spacing-md);
+    padding: var(--spacing-xl) var(--spacing-2xl);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .header-ornament {
-    color: #ccff00;
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.125em;
+    color: var(--color-primary);
 }
 
 .header-title {
-    color: #ccff00;
-    font-size: 16px;
-    font-weight: normal;
-    letter-spacing: 1px;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.0625em;
     text-transform: uppercase;
-}
-
-/* Main Content */
-.card-content {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 32px;
-    background-color: #2a2a2a;
-}
-
-.main-text {
     text-align: center;
-    color: #ccff00;
-    font-weight: bold;
+    color: var(--color-primary);
+}
+
+/* Content Grid System */
+.card-content {
+    display: grid;
+    grid-template-rows: 1fr auto auto;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-2xl);
+    align-content: center;
+    text-align: center;
+}
+
+.content-primary {
+    display: grid;
+    gap: calc(var(--spacing-md) * -0.5);
+    justify-items: center;
+}
+
+.main-headline {
+    font-size: clamp(4rem, 12vw, 8rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
     line-height: 0.85;
+    color: var(--color-primary);
 }
 
-.line-1 {
+.main-subline {
     font-size: clamp(4rem, 12vw, 8rem);
+    font-weight: 700;
     letter-spacing: -0.02em;
-    margin-bottom: -0.1em;
+    line-height: 0.85;
+    color: var(--color-primary);
 }
 
-.line-2 {
-    font-size: clamp(4rem, 12vw, 8rem);
-    letter-spacing: -0.02em;
+.content-secondary {
+    display: grid;
+    justify-items: center;
 }
 
-/* Footer */
+.event-tagline {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+    color: var(--color-primary);
+}
+
+.content-meta {
+    display: grid;
+    justify-items: center;
+}
+
+.event-date {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+}
+
+/* Footer Grid System */
 .card-footer {
-    background-color: #2a2a2a;
-    padding: 24px 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    border-top: 1px solid #404040;
-    gap: 24px;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: var(--spacing-xl);
+    align-items: end;
+    padding: var(--spacing-xl) var(--spacing-2xl);
+    border-top: 1px solid var(--color-border);
 }
 
-.footer-left {
-    display: flex;
+.footer-symbol {
+    display: grid;
     align-items: center;
 }
 
 .symbol {
-    color: #ccff00;
-    font-size: 32px;
-    font-weight: bold;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
 }
 
-.footer-center {
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    gap: 32px;
+.footer-details,
+.footer-meta {
+    display: grid;
 }
 
-.event-details,
-.date-details {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+.detail-group {
+    display: grid;
+    gap: var(--spacing-xs);
 }
 
 .detail-line {
-    color: #ccff00;
-    font-size: 11px;
-    font-weight: normal;
-    letter-spacing: 0.5px;
+    font-size: 0.6875rem;
+    font-weight: 400;
+    letter-spacing: 0.03125em;
     text-transform: uppercase;
+    color: var(--color-primary);
+    line-height: 1.2;
 }
 
-.footer-right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 8px;
+.footer-action {
+    display: grid;
+    gap: var(--spacing-sm);
+    justify-items: end;
+}
+
+.signup-link {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid transparent;
+    border-radius: var(--border-radius-sm);
+    text-decoration: none;
+    transition: var(--transition-default);
+    color: var(--color-primary);
+}
+
+.signup-link:hover,
+.signup-link:focus {
+    background-color: var(--color-primary);
+    color: var(--color-background-card);
+    border-color: var(--color-primary);
+    outline: none;
 }
 
 .signup-text {
-    color: #ccff00;
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: none;
-    letter-spacing: 1px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.0625em;
     text-transform: uppercase;
-    transition: all 0.3s ease;
-    padding: 8px 16px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-}
-
-.signup-text:hover {
-    background-color: #ccff00;
-    color: #2a2a2a;
-    border-color: #ccff00;
 }
 
 .expand-icon {
-    color: #ccff00;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-primary);
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
+    :root {
+        --spacing-xl: 1.25rem;
+        --spacing-2xl: 2rem;
+    }
+    
     .card {
         width: 95vw;
         min-height: 70vh;
     }
     
-    .card-header,
-    .card-footer {
-        padding: 20px 24px;
-    }
-    
-    .card-content {
-        padding: 32px 24px;
+    .card-header {
+        grid-template-columns: auto 1fr auto;
+        gap: var(--spacing-sm);
     }
     
     .header-title {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
     
     .header-ornament {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
     
-    .footer-center {
-        flex-direction: column;
-        gap: 16px;
+    .card-footer {
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: auto auto;
+        gap: var(--spacing-lg) var(--spacing-md);
     }
     
-    .event-details,
-    .date-details {
-        gap: 2px;
+    .footer-details {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-md);
     }
     
-    .detail-line {
-        font-size: 10px;
+    .footer-meta {
+        display: none;
     }
     
-    .signup-text {
-        font-size: 12px;
+    .footer-action {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
     }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
+    :root {
+        --spacing-xl: 1rem;
+        --spacing-2xl: 1.5rem;
+    }
+    
     .card {
         width: 98vw;
         min-height: 80vh;
-        border-radius: 16px;
+        border-radius: 1rem;
     }
     
-    .card-header,
-    .card-footer {
-        padding: 16px 20px;
-    }
-    
-    .card-content {
-        padding: 24px 20px;
-    }
-    
-    .footer-center {
-        gap: 12px;
-    }
-    
-    .line-1,
-    .line-2 {
+    .main-headline,
+    .main-subline {
         font-size: clamp(2.5rem, 10vw, 5rem);
+    }
+    
+    .card-footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+    
+    .footer-details {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .footer-action {
+        justify-items: center;
     }
 }
 
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
-    .signup-text {
-        transition: none;
+    :root {
+        --transition-default: none;
     }
 }
 
-/* High contrast mode */
 @media (prefers-contrast: high) {
     .card {
-        border: 2px solid #ccff00;
+        border: 2px solid var(--color-primary);
     }
     
     .card-header,
     .card-footer {
-        border-color: #ccff00;
+        border-color: var(--color-primary);
+    }
+}
+
+/* Focus management */
+.signup-link:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    :root {
+        --color-background-page: white;
+        --color-background-card: white;
+        --color-primary: black;
+        --color-border: black;
+    }
+    
+    .card {
+        box-shadow: none;
+        border: 1px solid black;
     }
 }
