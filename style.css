@@ -1,50 +1,20 @@
-/* Modern Museum-Style Font Showcase */
+/* Manusquared Font Typeface Card Design */
 
 /* Font Declarations */
 @font-face {
-    font-family: 'Der75';
-    src: url('./fonts/der75.otf') format('opentype');
+    font-family: 'Manusquared';
+    src: url('./fonts/Manusquared-Regular.woff2') format('woff2'),
+         url('./fonts/Manusquared-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Goozette';
-    src: url('./fonts/Goozette.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Linea';
-    src: url('./fonts/Linea.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Outata';
-    src: url('./fonts/Outata.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'RAMI';
-    src: url('./fonts/RAMI.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Scorpius';
-    src: url('./fonts/scorpius.otf') format('opentype');
-    font-weight: normal;
+    font-family: 'Manusquared';
+    src: url('./fonts/Manusquared-Bold.woff2') format('woff2'),
+         url('./fonts/Manusquared-Bold.woff') format('woff');
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
@@ -56,240 +26,247 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: 16px;
+html, body {
     height: 100%;
+    font-family: 'Manusquared', monospace;
 }
 
 body {
-    font-family: 'Der75', sans-serif;
-    background-color: #0a0a0a;
-    color: #ffffff;
-    height: 100vh;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Card Container */
+.card {
+    background-color: #2a2a2a;
+    border-radius: 24px;
+    width: 90vw;
+    max-width: 800px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
     overflow: hidden;
+    position: relative;
+}
+
+/* Header */
+.card-header {
+    background-color: #2a2a2a;
+    padding: 24px 32px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    line-height: 1;
+    border-bottom: 1px solid #404040;
 }
 
-/* Container */
-.container {
-    width: 100%;
-    max-width: 1400px;
-    padding: 2rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;
-    gap: 4rem;
-    height: 100vh;
-    align-content: center;
+.header-ornament {
+    color: #ccff00;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
-/* Hero Section */
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 6rem;
-}
-
-.typography-stack {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-/* Typography Hierarchy */
-.display-xl {
-    font-family: 'Outata', serif;
-    font-size: clamp(4rem, 12vw, 12rem);
-    letter-spacing: -0.02em;
+.header-title {
+    color: #ccff00;
+    font-size: 16px;
     font-weight: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Main Content */
+.card-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 32px;
+    background-color: #2a2a2a;
+}
+
+.main-text {
+    text-align: center;
+    color: #ccff00;
+    font-weight: bold;
     line-height: 0.85;
 }
 
-.display-lg {
-    font-family: 'RAMI', sans-serif;
-    font-size: clamp(2.5rem, 8vw, 8rem);
-    letter-spacing: 0.02em;
-    font-weight: normal;
-    line-height: 0.9;
-    margin-top: -1rem;
+.line-1 {
+    font-size: clamp(4rem, 12vw, 8rem);
+    letter-spacing: -0.02em;
+    margin-bottom: -0.1em;
 }
 
-.display-md {
-    font-family: 'Linea', sans-serif;
-    font-size: clamp(1.5rem, 5vw, 5rem);
-    letter-spacing: 0.1em;
-    font-weight: normal;
-    line-height: 1;
-    margin-top: 2rem;
-    opacity: 0.9;
+.line-2 {
+    font-size: clamp(4rem, 12vw, 8rem);
+    letter-spacing: -0.02em;
 }
 
-/* Date Block */
-.date-block {
+/* Footer */
+.card-footer {
+    background-color: #2a2a2a;
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid #404040;
+    gap: 24px;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.symbol {
+    color: #ccff00;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.footer-center {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.event-details,
+.date-details {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 3rem 4rem;
-    border: 2px solid #ffffff;
-    background-color: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
+    gap: 4px;
 }
 
-.date-primary {
-    font-family: 'Goozette', monospace;
-    font-size: clamp(1.5rem, 4vw, 3rem);
-    letter-spacing: 0.1em;
+.detail-line {
+    color: #ccff00;
+    font-size: 11px;
     font-weight: normal;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
-.date-year {
-    font-family: 'Scorpius', serif;
-    font-size: clamp(2rem, 6vw, 5rem);
-    letter-spacing: -0.02em;
-    font-weight: normal;
-    line-height: 0.8;
-}
-
-/* CTA Section */
-.cta {
+.footer-right {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.signup-link {
-    display: inline-block;
-    padding: 2rem 4rem;
-    border: 3px solid #ffffff;
-    background-color: transparent;
-    text-decoration: none;
-    color: #ffffff;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.signup-link:hover {
-    background-color: #ffffff;
-    color: #0a0a0a;
-    transform: translateY(-2px);
-}
-
-.signup-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    transition: left 0.5s;
-}
-
-.signup-link:hover::before {
-    left: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
 }
 
 .signup-text {
-    font-family: 'Der75', sans-serif;
-    font-size: clamp(1.2rem, 3vw, 2rem);
-    letter-spacing: 0.15em;
-    font-weight: normal;
-    position: relative;
-    z-index: 1;
+    color: #ccff00;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.signup-text:hover {
+    background-color: #ccff00;
+    color: #2a2a2a;
+    border-color: #ccff00;
+}
+
+.expand-icon {
+    color: #ccff00;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    .container {
-        padding: 1rem;
-        gap: 3rem;
+    .card {
+        width: 95vw;
+        min-height: 70vh;
     }
     
-    .hero {
-        gap: 4rem;
+    .card-header,
+    .card-footer {
+        padding: 20px 24px;
     }
     
-    .typography-stack {
-        gap: 0.5rem;
+    .card-content {
+        padding: 32px 24px;
     }
     
-    .date-block {
-        padding: 2rem 3rem;
+    .header-title {
+        font-size: 14px;
     }
     
-    .signup-link {
-        padding: 1.5rem 3rem;
+    .header-ornament {
+        font-size: 14px;
+    }
+    
+    .footer-center {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .event-details,
+    .date-details {
+        gap: 2px;
+    }
+    
+    .detail-line {
+        font-size: 10px;
+    }
+    
+    .signup-text {
+        font-size: 12px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .container {
-        padding: 0.5rem;
-        gap: 2rem;
+    .card {
+        width: 98vw;
+        min-height: 80vh;
+        border-radius: 16px;
     }
     
-    .hero {
-        gap: 3rem;
+    .card-header,
+    .card-footer {
+        padding: 16px 20px;
     }
     
-    .date-block {
-        padding: 1.5rem 2rem;
+    .card-content {
+        padding: 24px 20px;
     }
     
-    .signup-link {
-        padding: 1rem 2rem;
+    .footer-center {
+        gap: 12px;
+    }
+    
+    .line-1,
+    .line-2 {
+        font-size: clamp(2.5rem, 10vw, 5rem);
     }
 }
 
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
-    .signup-link {
+    .signup-text {
         transition: none;
-    }
-    
-    .signup-link::before {
-        transition: none;
-    }
-    
-    .signup-link:hover {
-        transform: none;
     }
 }
 
 /* High contrast mode */
 @media (prefers-contrast: high) {
-    .date-block {
-        background-color: rgba(255, 255, 255, 0.1);
-        border-width: 3px;
+    .card {
+        border: 2px solid #ccff00;
     }
     
-    .signup-link {
-        border-width: 4px;
-    }
-}
-
-/* Print styles */
-@media print {
-    body {
-        background-color: white;
-        color: black;
-    }
-    
-    .signup-link {
-        border-color: black;
-        color: black;
-    }
-    
-    .date-block {
-        border-color: black;
-        background-color: white;
+    .card-header,
+    .card-footer {
+        border-color: #ccff00;
     }
 }
