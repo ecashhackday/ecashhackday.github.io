@@ -328,17 +328,20 @@ body {
     
     .card-footer {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, auto);
-        gap: var(--spacing-md);
+        grid-template-rows: auto;
+        gap: var(--spacing-lg);
         text-align: center;
     }
     
     .footer-details {
+        grid-column: auto;
         grid-template-columns: 1fr;
         gap: var(--spacing-sm);
     }
     
     .footer-action {
+        grid-column: auto;
+        grid-row: auto;
         justify-items: center;
     }
 }
