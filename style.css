@@ -8,6 +8,7 @@
     --color-border: #404040;
     
     --font-family-primary: 'Manusquared', monospace;
+    --font-family-secondary: 'Mattone', sans-serif;
     
     --spacing-xs: 0.25rem;
     --spacing-sm: 0.5rem;
@@ -43,6 +44,14 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Mattone';
+    src: url('./fonts/Mattone-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Reset and Base Styles */
 *,
 *::before,
@@ -64,7 +73,7 @@ html {
 
 body {
     height: 100%;
-    font-family: var(--font-family-primary);
+    font-family: var(--font-family-secondary);
     background-color: var(--color-background-page);
     color: var(--color-primary);
     line-height: 1.5;
@@ -133,6 +142,7 @@ body {
 }
 
 .main-headline {
+    font-family: var(--font-family-primary);
     font-size: clamp(4rem, 12vw, 8rem);
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -141,6 +151,7 @@ body {
 }
 
 .main-subline {
+    font-family: var(--font-family-primary);
     font-size: clamp(4rem, 12vw, 8rem);
     font-weight: 700;
     letter-spacing: -0.02em;
